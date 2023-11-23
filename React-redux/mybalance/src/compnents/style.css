@@ -1,5 +1,7 @@
-table{
-    width:50%
+table,th{
+    width:40%;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 .conatiner{
     margin: 20px;
