@@ -1,0 +1,32 @@
+table{
+    width:50%
+}
+.conatiner{
+    margin: 20px;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+   
+}
+input{
+   width: 50%; 
+   padding: 10px;
+  
+}
+button{
+ background-color: rgb(73, 73, 200);
+ padding: 10px;
+ border-radius: 5px;
+ margin-left: 5px;
+ color:rgb(199, 194, 194);
+border: none;
+
+
+}
+#h2{
+    color:rgb(86, 86, 165)
+}
+#b-2{
+    background-color: rgb(198, 62, 62);
+}
