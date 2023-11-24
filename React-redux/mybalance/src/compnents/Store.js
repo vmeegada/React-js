@@ -1,4 +1,4 @@
-import {createStore} from 'redux'
+import {createStore,combineReducers} from 'redux'
 const initialState ={
     balance :0,
     fullName:"",
@@ -22,5 +22,25 @@ function reducer(state=initialState ,action){
     } 
 
 }
-const Store =  createStore(reducer)
+
+function transactionReducer(state=[],action){
+    switch(action.type){
+        case "ADD":
+            return [...state,
+                {
+                    id:action.payload.id,
+                    amount:action.payload.amount,
+                    type:action.payload.type,
+                     date:action.payload.date}]
+    default :
+    return state
+    }
+}
+
+ let rootReducer=combineReducers({
+  account: reducer,
+  transaction:transactionReducer
+})
+//combine reducers in redux
+const Store =  createStore(rootReducer)
 export default Store
